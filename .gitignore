@@ -1,0 +1,9 @@
+# workspace
+.env
+.vscode
+
+# python
+**.pyc
+
+# langchain
+output.txt
