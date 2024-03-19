@@ -28,7 +28,7 @@ Memory refers to persisting state between calls of a chain/agent. LangChain prov
 
 ## Abstractions
 
-### Retrieval Augmented Generation
+### Retrieval-Augmented Generation
 
 1. Retrieval
 2. Prompt
