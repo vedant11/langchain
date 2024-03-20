@@ -2,6 +2,15 @@
 
 LangChain gives you the building blocks to interface with any language model.
 
+## Repo Guide
+
+-   (script-chain.py)
+-   (script-retrieval_chain.py)
+    -   A retriever can be backed by anything, DB, data store, internet, or a vector store
+-   (script-conversational_retrieval_chain.py)
+    -   chains above answer only one history-independent question
+    -   this can handle follow-up questions as well
+
 ## Usages
 
 ### LLMs and Prompts
@@ -56,10 +65,10 @@ Memory refers to persisting state between calls of a chain/agent. LangChain prov
 
 ### Storage and Indexing
 
-1. Document Loader
+1. Document Loader: WebBaseLoader for internet
 2. Text Splitter
-3. Embeddings
-4. Vector Store: Data in embedded into this store for indexing
+3. Embeddings: OpenAIEmbeddings
+4. Vector Store: Data is embedded into this store for indexing
 
 ### Extraction
 

@@ -9,5 +9,6 @@ flexible_prompt = PromptWithTemplate(
 hardcoded_prompt.chain = hardcoded_prompt.chain | StrOutputParser()
 flexible_prompt.chain = flexible_prompt.chain | StrOutputParser()
 
+# invoking the prompts
 hardcoded_prompt.invoke("how can langsmith help with testing?")
 flexible_prompt.invoke("how can langsmith help with testing?")

@@ -4,6 +4,7 @@
 
 # python
 **.pyc
+run_script.py
 
 # langchain
 output.txt
