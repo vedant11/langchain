@@ -1,5 +1,7 @@
 # langchain
 
+LangChain gives you the building blocks to interface with any language model.
+
 ## Usages
 
 ### LLMs and Prompts
@@ -36,8 +38,19 @@ Memory refers to persisting state between calls of a chain/agent. LangChain prov
 
 ### Agents
 
-1. Prompt
+1. Prompt: The inputs to language models are often called prompts
+    1. Prompts generate structured messages from user input. They are casted into `Messages` for `ChatModels` and `str` for `LanguageModels`. `PromptValue` is the interface-like common class.
+    2. User input string to these final structured input to models are handled by `PromptTemplates`.
+    3. Types:
+        1. `MessagePromptTemplate`: Consists of `role` and `PromptTemplate`. Could be: `HumanMessagePromptTemplate`, `AIMessagePromptTemplate`, or `SystemMessagePromptTemplate`, depending on the `role`.
+        2. `ChatPromptTemplate`: Consists of list of PromptTemplates depending on variety of roles. Think of it as giving the history of conversation, i.e. list of messages by AI, User, System, or other roles.
 2. Model
+    1. Types: LLMs and ChatModels (built upon LLMs and tuned for conversation)
+    2. ChatModels take input as a `Message`: attrs: `role` and `content`; different message classes are present in langchain for different roles.
+        1. `content` is either a string or list of dictionaries (for multi-modal input). The message can be classified into `HumanMessage` or `AIMessage`
+        2. `SystemMessage` tells model how to behave.
+        3. `FunctionMessage` represents the output of a function call
+        4. `ToolMessage` represents the output of a tool call
 3. Output Parser
 4. Tools
 
