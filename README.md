@@ -32,7 +32,7 @@ Memory refers to persisting state between calls of a chain/agent. LangChain prov
 
 ### Retrieval-Augmented Generation
 
-1. Retrieval
+1. Retrieval: Retriever retrieves the important context only, to be passed to the LLM, which was not included in the training data.
 2. Prompt
 3. Chat Model
 
@@ -51,7 +51,7 @@ Memory refers to persisting state between calls of a chain/agent. LangChain prov
         2. `SystemMessage` tells model how to behave.
         3. `FunctionMessage` represents the output of a function call
         4. `ToolMessage` represents the output of a tool call
-3. Output Parser
+3. Output Parser: Formats AIMessage into human-readable strings
 4. Tools
 
 ### Storage and Indexing
@@ -59,7 +59,7 @@ Memory refers to persisting state between calls of a chain/agent. LangChain prov
 1. Document Loader
 2. Text Splitter
 3. Embeddings
-4. Vector Store
+4. Vector Store: Data in embedded into this store for indexing
 
 ### Extraction
 
